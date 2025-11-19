@@ -44,7 +44,7 @@ npm run dev
 - **Frontend**: SvelteKit 2, TypeScript
 - **AI**: Cerebras Cloud SDK (gpt-oss-120b model)
 - **Styling**: Minimal CSS
-- **Runtime**: Bun/Node.js
+- **Runtime**: Node.js (or Bun)
 
 ## Development
 
