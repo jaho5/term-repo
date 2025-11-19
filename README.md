@@ -1,38 +1,57 @@
-# sv
+# Term Registry
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+An AI-powered learning tool that generates structured term entries for any topic. Built with SvelteKit and Cerebras AI.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Generate comprehensive term definitions for any topic
+- Adjustable learning levels: beginner, intermediate, advanced, expert
+- Each term includes:
+  - Core definition
+  - Technical definition
+  - Practical examples
+  - Usage guidance
+  - Scope/context
+  - Relationships to other terms
+- Clean, minimal UI with expandable/collapsible term cards
 
+## Setup
+
+1. Install dependencies:
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
 
-## Developing
+2. Create a `.env` file with your Cerebras API key:
+```sh
+CEREBRAS_API_KEY=your_api_key_here
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+3. Start the development server:
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Usage
 
-To create a production version of your app:
+1. Enter a topic (e.g., "React Hooks", "Machine Learning", "Quantum Physics")
+2. Select your learning level
+3. Click "Generate Terms"
+4. Browse generated terms - click any term to expand full details
+
+## Tech Stack
+
+- **Frontend**: SvelteKit 2, TypeScript
+- **AI**: Cerebras Cloud SDK (gpt-oss-120b model)
+- **Styling**: Minimal CSS
+- **Runtime**: Bun/Node.js
+
+## Development
 
 ```sh
-npm run build
+npm run dev          # Start dev server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run linter
+npm run format       # Format code with Prettier
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
